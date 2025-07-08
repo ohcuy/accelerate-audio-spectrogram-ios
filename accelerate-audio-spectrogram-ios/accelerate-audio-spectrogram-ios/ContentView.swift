@@ -15,7 +15,7 @@ struct ContentView: View {
             Image(decorative: audioSpectrogram.outputImage, scale: 1, orientation: .left)
                 .resizable()
 
-            HStack {
+            VStack {
                 // 주파수 도메인에서 데시벨 값에 곱해져서 시각적으로 얼마나 밝게/강하게 표현할지를 조절하는 스케일 계수 = 이미지 밝기 조절
                 Text("Gain")
                 Slider(value: $audioSpectrogram.gain, in: 0.01 ... 0.04)
